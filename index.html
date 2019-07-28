@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mon Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+
+    <script type="text/javascript" src="js/index.js"></script>
+    
+    
+</head>
+<body>
+    <div data-role="page" id="page">
+        <div data-role="header">
+            <h1>Page d'Accueil</h1>
+            
+            <a href="#popupMenu" data-rel="popup" data-transition="slidedown" class="ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-gear ui-btn-icon-notext ui-btn-shadow ui-btn-corner-all ui-btn-b">Options</a>
+            <div data-role="popup" id="popupMenu" data-theme="b">
+                    <ul data-role="listview" data-inset="true" style="min-width:210px;">
+                        <li data-role="list-divider">Choose an action</li>
+                        <li><a id="user-opt" data-transition="slide">User</a></li>
+                        <li><a href="#add" data-transition="slide">Add User</a></li>
+                        <li><a href="#">Exit</a></li>
+                    </ul>
+            </div>
+
+        </div>
+        <div data-role="content">
+            <h2>Bienvenue sur votre Blog</h2>
+            <!-- Mon blog <a href="#page2">Votre 2eme page</a> -->
+            <a id="user" class="ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-action ui-btn-b" data-transition="slide">User</a>
+            <a href="#add" class="ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-action ui-btn-b" data-transition="slide">Add</a>
+        </div>
+        <div data-role="footer" data-theme="b" data-position="fixed">
+            &copy;2019
+        </div>
+    </div>
+
+    <div data-role="page" id="page2">
+        <div data-role="header">
+            <h1>Liste des User</h1>
+            <a href="#page" class="ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-back ui-btn-icon-notext ui-btn-shadow ui-btn-corner-all ui-btn-b" data-transition="slide" data-direction="reverse">Retour</a>
+        </div>
+        <div id="main" role="main" class="ui-content">
+            <ul data-role="listview" data-inset="true" id="resultat" data-autodividers="true" data-filter="true">
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            &copy;2019
+        </div>
+    </div>
+
+    <div data-role="page" id="add">
+        <div data-role="header">
+            <h1>Add new user</h1>
+            <a href="#page" class="ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-back ui-btn-icon-notext ui-btn-shadow ui-btn-corner-all ui-btn-b" data-transition="slide" dta-direction="reverse">Retour</a>
+        </div>
+        <div data-role="main" class="ui-content">
+            <form>
+                <div class="ui-field-contain">
+                    <label for="prenom">Prenom:</label>
+                    <input type="text" name="prenom" id="prenom" placeholder="prenom">
+                    <label for="nom">Nom:</label>
+                    <input type="text" name="nom" id="nom" placeholder="nom">
+                    <label for="textinput-fc">Adresse:</label>
+                    <input type="text" name="adresse" id="adresse" placeholder="adresse" value="">
+
+                    <a id="ajouter" class="ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-plus ui-btn-b">Ajouter</a>
+
+                </div>
+            </form>
+        </div>            
+
+        <div data-role="footer" data-theme="b" data-position="fixed">
+            &copy;2019
+        </div>
+    </div>
+
+    <div data-role="page" id="profil">
+        <div data-role="header">
+            <h1>User Informations</h1>
+            <a href="#page2" class="ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-back ui-btn-icon-notext ui-btn-shadow ui-btn-corner-all ui-btn-b" data-transition="slide" data-direction="reverse">Retour</a>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <form>
+                <div class="ui-field-contain">
+                    <label for="identifiant">ID:</label>
+                    <input type="text" name="identifiant" id="identifiant" disabled="disabled">
+                    <label for="prenom">Prenom:</label>
+                    <input type="text" name="prenom" id="Prenom">
+                    <label for="nom">Nom:</label>
+                    <input type="text" name="nom" id="Nom">
+                    <label for="textinput-fc">Adresse:</label>
+                    <input type="text" name="adresse" id="Adresse">
+
+                    <a id="update" class="ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-edit ui-btn-b">Update</a>
+                    <a id="delete" class="ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-delete ui-btn-b">Delete</a>
+
+                </div>
+            </form>
+        </div>
+        <div data-role="footer" data-theme="b" data-position="fixed">
+            &copy;2019
+        </div>
+    </div>
+
+
+</body>
+</html>
